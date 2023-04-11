@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { MainColor } from "../../pages/_app";
+import { MainColor } from "../../pages/_document";
 
 export const Wrapper = styled.div`
   width: 100%;

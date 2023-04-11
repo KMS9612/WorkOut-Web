@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+export const MainColor = "#ff8375";
+
 export default class CustomDocument extends Document {
   render() {
     return (
