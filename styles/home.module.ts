@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-import { MainColor } from "../pages/_document";
+import { MainColor, SecondColor } from "../pages/_document";
 
 export const Wrapper = styled.div`
   width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,12 +10,39 @@ export const Wrapper = styled.div`
 `;
 
 export const Top = styled.div`
-  height: 950px;
+  width: 100%;
+  height: 800px;
+  margin-bottom: 90px;
+  background-color: ${SecondColor};
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+export const HeadText = styled.div`
+  width: 50%;
+  height: 100%;
+  border: 1px solid;
+  color: #fff;
+  font-size: 52px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const CardBox = styled.div`
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const BackGroundImage = styled.img`
-  width: 95%;
+  width: 100%;
   height: 100%;
+  position: relative;
   text-align: center;
 `;
 
@@ -28,21 +54,18 @@ export const DownLoadBtn = styled.button`
   border-radius: 4px;
   font-family: "Oswald";
   font-size: 24px;
-  font-weight: 300;
   color: #fff;
   position: absolute;
   top: 100mm;
-  left: 50mm;
+  left: 100mm;
   cursor: pointer;
   &:hover {
     transition: 1s;
-    color: black;
+    background-color: ${SecondColor};
   }
 `;
 
-export const Middle = styled.div`
-  width: 80%;
-`;
+export const Middle = styled.div``;
 
 export const AnimationBox = styled.div`
   width: 100%;
@@ -62,6 +85,8 @@ export const GifImage = styled.div`
   width: 500px;
   height: 500px;
   background-color: #000;
+  color: #fff;
+  text-align: center;
   opacity: 0;
   transition: all 1000ms;
   transform: translate(120px, 1%);
