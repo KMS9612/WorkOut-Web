@@ -15,19 +15,29 @@ export const Top = styled.div`
   margin-bottom: 90px;
   background-color: ${SecondColor};
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 `;
-export const HeadText = styled.div`
+
+export const TextBox = styled.div`
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+export const HeadText = styled.div`
+  width: 100%;
   height: 100%;
-  border: 1px solid;
   color: #fff;
   font-size: 52px;
   font-weight: 400;
   display: flex;
-  justify-content: center;
-  align-items: center;
+`;
+export const SubText = styled.div`
+  width: 100%;
+  color: #fff;
+  font-size: 32px;
 `;
 export const CardBox = styled.div`
   width: 40%;

@@ -24,26 +24,29 @@ export default function Home() {
 
   const CardObj = [
     {
-      Title: "Hello",
-      SubText: "World",
+      Title: "#오운완",
+      SubText: "오늘 진행한 루틴을 저장해봐요!",
     },
     {
-      Title: "안녕하세요",
-      SubText: "World",
+      Title: "#프로 루틴러",
+      SubText: "오늘은 어떤 루틴을 만들어볼까?",
     },
     {
-      Title: "Hello",
-      SubText: "World",
+      Title: "#계획충",
+      SubText: "어떤 루틴을 얼마나 진행했지?",
     },
     {
-      Title: "Hello",
-      SubText: "World",
+      Title: "#헬창",
+      SubText: "사레레 그렇게 하는거 아닌데...",
     },
   ];
   return (
     <HS.Wrapper>
       <HS.Top>
-        <HS.HeadText>소개, 설명, 등의 타이포그래피가 들어갈 자리</HS.HeadText>
+        <HS.TextBox>
+          <HS.HeadText>오늘도 WorkOut! 해볼까?</HS.HeadText>
+          <HS.SubText>당신만의 루틴을 만들고, 수행하고, 저장하고, 관리하세요!</HS.SubText>
+        </HS.TextBox>
         <HS.CardBox>
           {CardObj?.map((e, index) => {
             return <Card key={index} Title={e.Title} SubText={e.SubText} />;

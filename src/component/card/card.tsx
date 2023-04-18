@@ -12,10 +12,12 @@ interface IPropsCard {
 const Wrapper = styled.div`
   width: 300px;
   height: 300px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   background-color: ${MainColor};
   border-radius: 15px;
+  box-shadow: 8px 10px 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +37,7 @@ const Title = styled.div`
   animation: ${FadeIn} 3s ease alternate;
 `;
 const SubText = styled.div`
+  font-size: 21px;
   animation: ${FadeIn} 3s ease alternate;
 `;
 
