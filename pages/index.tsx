@@ -13,16 +13,18 @@ export default function Home() {
     }
   }, []);
 
-  const handleDownload = () => {
-    const FileUrl = isWin ? "/Download/WorkOutSetup1.0.0.exe" : "/Download/WorkOut_1.0.0.dmg";
-    window.location.href = FileUrl;
-  };
+  // const handleDownload = () => {
+  //   const FileUrl = isWin ? "/public/Download/workout.exe" : "/Download/workout.dmg";
+  //   window.location.href = FileUrl;
+  // };
   return (
     <HS.Wrapper>
       <HS.TextBox>
         <HS.Left>
           <HS.HeadText>오늘도 WorkOut!</HS.HeadText>
-          <HS.DownLoadBtn onClick={handleDownload}>{isWin ? "Window" : "MacOS"}다운로드</HS.DownLoadBtn>
+          <HS.DownLoadBtn>
+            <a href="https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.exe">{isWin ? "Window" : "MacOS"}다운로드</a>
+          </HS.DownLoadBtn>
         </HS.Left>
         <HS.Right>
           <HS.SubText>
