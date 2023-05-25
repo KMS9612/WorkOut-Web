@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { MainColor, SecondColor } from "../pages/_document";
 
 export const Wrapper = styled.div`
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,12 +19,17 @@ export const TextBox = styled.div`
   align-items: center;
   color: #fff;
 `;
+export const Left = styled.div``;
 export const HeadText = styled.div`
   width: 500px;
   font-size: 52px;
   font-weight: 400;
   text-align: left;
 `;
+export const Right = styled.div`
+  text-align: right;
+`;
+
 export const SubText = styled.div`
   width: 500px;
   font-size: 32px;

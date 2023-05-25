@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import * as HS from "../styles/home.module";
-import TypingAnimation from "@/common/text/typingAnimation";
 
 export default function Home() {
   const [isWin, setIsWin] = useState<Boolean>();
@@ -12,29 +11,34 @@ export default function Home() {
     } else if (USER_OS.includes("WIN")) {
       setIsWin(true);
     }
-  });
+  }, []);
 
   const handleDownload = () => {
-    const FileUrl = isWin ? "/Download/WorkOutSetup1.0.0.exe" : "/Donwload/WorkOut-1.0.0-arm64.dmg";
+    const FileUrl = isWin
+      ? "/Download/WorkOutSetup1.0.0.exe"
+      : "/Download/WorkOut-1.0.0-arm64.dmg";
     window.location.href = FileUrl;
   };
   return (
     <HS.Wrapper>
       <HS.TextBox>
-        <div>
+        <HS.Left>
           <HS.HeadText>오늘도 WorkOut!</HS.HeadText>
-          <HS.DownLoadBtn onClick={handleDownload}>{isWin ? "Window" : "Mac"}다운로드</HS.DownLoadBtn>
-        </div>
-        <HS.SubText>
-          당신만의 루틴을
-          <br />
-          만들고
-          <br />
-          수행하고
-          <br />
-          기록하세요
-          <br />
-        </HS.SubText>
+          <HS.DownLoadBtn onClick={handleDownload}>
+            {isWin ? "Window" : "Mac"}다운로드
+          </HS.DownLoadBtn>
+        </HS.Left>
+        <HS.Right>
+          <HS.SubText>
+            당신만의 루틴을
+            <br />
+            만들고
+            <br />
+            수행하고
+            <br />
+            기록하세요
+          </HS.SubText>
+        </HS.Right>
       </HS.TextBox>
     </HS.Wrapper>
   );
