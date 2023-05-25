@@ -14,9 +14,7 @@ export default function Home() {
   }, []);
 
   const handleDownload = () => {
-    const FileUrl = isWin
-      ? "/Download/WorkOutSetup1.0.0.exe"
-      : "/Download/WorkOut-1.0.0-arm64.dmg";
+    const FileUrl = isWin ? "/Download/WorkOutSetup1.0.0.exe" : "/Download/WorkOut_1.0.0.dmg";
     window.location.href = FileUrl;
   };
   return (
@@ -24,9 +22,7 @@ export default function Home() {
       <HS.TextBox>
         <HS.Left>
           <HS.HeadText>오늘도 WorkOut!</HS.HeadText>
-          <HS.DownLoadBtn onClick={handleDownload}>
-            {isWin ? "Window" : "Mac"}다운로드
-          </HS.DownLoadBtn>
+          <HS.DownLoadBtn onClick={handleDownload}>{isWin ? "Window" : "MacOS"}다운로드</HS.DownLoadBtn>
         </HS.Left>
         <HS.Right>
           <HS.SubText>
