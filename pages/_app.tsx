@@ -1,4 +1,4 @@
-import HomeLayout from "@/component/layout/home.layout";
+import HomeLayout from "../src/component/layout/Home.layout";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
