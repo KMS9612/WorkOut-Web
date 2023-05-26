@@ -3,6 +3,8 @@ import * as HS from "../styles/home.module";
 
 export default function Home() {
   const [isWin, setIsWin] = useState<Boolean>();
+  const WINDOW_VERSION_HREF = "https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.exe";
+  const MAC_VERSION_HREF = "https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.dmg";
 
   useEffect(() => {
     const USER_OS = navigator.userAgent.toUpperCase();
@@ -13,17 +15,13 @@ export default function Home() {
     }
   }, []);
 
-  // const handleDownload = () => {
-  //   const FileUrl = isWin ? "/public/Download/workout.exe" : "/Download/workout.dmg";
-  //   window.location.href = FileUrl;
-  // };
   return (
     <HS.Wrapper>
       <HS.TextBox>
         <HS.Left>
           <HS.HeadText>오늘도 WorkOut!</HS.HeadText>
           <HS.DownLoadBtn>
-            <a href="https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.exe">{isWin ? "Window" : "MacOS"}다운로드</a>
+            <a href={isWin ? WINDOW_VERSION_HREF : MAC_VERSION_HREF}>{isWin ? "Window" : "MacOS"}다운로드</a>
           </HS.DownLoadBtn>
         </HS.Left>
         <HS.Right>
