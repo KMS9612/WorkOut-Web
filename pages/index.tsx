@@ -3,7 +3,7 @@ import * as HS from "../styles/home.module";
 
 export default function Home() {
   const [isWin, setIsWin] = useState<Boolean>();
-  const WINDOW_VERSION_HREF = "https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.exe";
+  const WINDOW_VERSION_HREF = "https://workoutwindow.s3.ap-northeast-2.amazonaws.com/WorkOut+Setup+1.0.0.exe";
   const MAC_VERSION_HREF = "https://workoutwindow.s3.ap-northeast-2.amazonaws.com/workout.dmg";
 
   useEffect(() => {
