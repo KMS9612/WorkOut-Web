@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { MainColor, SecondColor } from "../pages/_document";
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
